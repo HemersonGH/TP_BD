@@ -1,0 +1,64 @@
+.ajust {
+  /* margin: 0px auto; */ serve para centralizar os input
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.distance {
+  margin-top: 15px;
+  color: white;
+  background-color: #616B5C;
+}
+
+.paddingForm {
+  margin-top: 5px;
+}
+
+.padding {
+  margin-top: 10px;
+}
+
+.paddingUp {
+  margin-top: 15px;
+}
+
+.paddingButton {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  float: center;
+}
+
+.color {
+  color: white;
+}
+
+.position {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: auto;
+}
+
+.control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}

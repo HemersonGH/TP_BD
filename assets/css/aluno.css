@@ -1,0 +1,239 @@
+.ajust {
+  /* margin: 0px auto; */ serve para centralizar os input
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.tituloConjunto {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.distance {
+  color: white;
+  margin-top: 15px;
+  background-color: #616B5C;
+}
+
+.cursor {
+  cursor:pointer;
+}
+
+.position_left {
+  align-items: flex-start;
+  float: left;
+}
+
+.position_right {
+  float: right;
+  text-align: right;
+}
+
+.div_height {
+  height: 130%;
+}
+
+.descricao_height {
+  height: 200px;
+  resize: none;
+}
+
+.descricao_atividade {
+  height: 150px;
+  resize: none;
+}
+
+.resposta {
+  height: 150px;
+  resize: none;
+}
+
+.camp {
+  height: 42px;
+}
+
+.padding {
+  margin-top: 10px;
+}
+
+.paddingTable {
+  margin-top: 15px;
+}
+
+.paddingButton {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.paddingBottonAnexo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.paddingBotton {
+  margin-bottom: 15px;
+}
+
+.paddingUp {
+  margin-top: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  float: center;
+}
+
+.color {
+  color: white;
+}
+
+.position {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: auto;
+}
+
+.control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.checkbox {
+  font-size: 18px;
+  height: 20px;
+  width: 20px;
+}
+
+.remove {
+  color: red;
+  font-size: 22px;
+}
+
+.pencil {
+  font-size: 20px;
+  color: black;
+}
+
+.color_disabled {
+  font-size: 20px;
+  color: silver;
+}
+
+.plus_square {
+  font-size: 15px;
+}
+
+.paste {
+  font-size: 20px;
+}
+
+.folder {
+  font-size: 20px;
+}
+
+.paddingButtonSolicitacao {
+  margin-top: 37px;
+  cursor:pointer;
+}
+
+.font {
+  font-size: 16px;
+}
+
+.spaceBeetwen {
+  padding-right: 8px;
+}
+
+.spaceBeetwenComponents {
+  padding-bottom: 20px;
+}
+
+
+.checkTrofeu {
+  width: 20px;
+  height: 20px;
+  /* align-items: flex-start; */
+}
+
+.ouro {
+  color:#ffd700;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.prata {
+  color:#909090;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.bronze {
+  color:#cd7f32;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.ouroEnvio {
+  color:#ffd700;
+  font-size: 35px;
+}
+
+.prataEnvio {
+  color:#909090;
+  font-size: 35px;
+}
+
+.bronzeEnvio {
+  color:#cd7f32;
+  font-size: 35px;
+}
+
+.eye {
+  font-size: 20px;
+  color: black;
+}
+
+.colorHeader {
+  background-color: #B9CFCB;
+}
+
+.handshake {
+  font-size: 20px;
+  color: black;
+}
+
+.justificativa {
+  height: 100px;
+  resize: none;
+}
+
+.pencil_square {
+  cursor:pointer;
+  /* color: red; */
+  font-size: 20px;
+}
+
+.current {
+  background-color: silver;
+}
+
+.paper_plane {
+  font-size: 20px;
+  /* color: black; */
+}

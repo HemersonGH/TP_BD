@@ -7,7 +7,7 @@
   <div class="col-md-12">
     <div class="col-md-6 form-control form-group paddingBotton">
       <form action="<?= base_url(); ?>professor/cadastrar_disciplina" method="post">
-        <input type="hidden" id="idProfessor" name="idProfessor" value="<?= $this->session->userdata('idUsuario')?>">
+        <input type="hidden" id="idProfessor" name="idProfessor" value="<?= $this->session->userdata('idProfessor')?>">
         <div class="row">
           <div class="col-md-12">
             <label for="nome_disciplina" class="padding"> <h6> Nome da Disciplina: </h6> </label>

@@ -119,7 +119,7 @@ CREATE TABLE `solicitacao_disciplina` (
 --
 
 CREATE TABLE `usuario` (
-  `idUsuario` int(11) NOT NULL,
+  `idProfessor` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `cpf` varchar(20) NOT NULL,
   `data` date NOT NULL,
@@ -182,7 +182,7 @@ ALTER TABLE `solicitacao_disciplina`
 -- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idUsuario`);
+  ADD PRIMARY KEY (`idProfessor`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -210,7 +210,7 @@ ALTER TABLE `disciplina`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProfessor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -227,26 +227,26 @@ ALTER TABLE `atividade`
 --
 ALTER TABLE `conjunto_atividade`
   ADD CONSTRAINT `fk_conjunto_atividade_da_disciplina` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE SET NULL ON UPDATE SET NULL,
-  ADD CONSTRAINT `fk_conjunto_atividade_professor` FOREIGN KEY (`idProfessor`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_conjunto_atividade_professor` FOREIGN KEY (`idProfessor`) REFERENCES `usuario` (`idProfessor`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `disciplina`
 --
 ALTER TABLE `disciplina`
-  ADD CONSTRAINT `fk_disciplina_professor` FOREIGN KEY (`idProfessor`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_disciplina_professor` FOREIGN KEY (`idProfessor`) REFERENCES `usuario` (`idProfessor`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `participa_disciplina`
 --
 ALTER TABLE `participa_disciplina`
-  ADD CONSTRAINT `fk_Usuario_participa` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_Usuario_participa` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idProfessor`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_disciplina_participa` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `realiza_atividade`
 --
 ALTER TABLE `realiza_atividade`
-  ADD CONSTRAINT `fk_aluno_realiza_atividade` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_aluno_realiza_atividade` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idProfessor`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_atividade_realizada` FOREIGN KEY (`idAtividade`) REFERENCES `atividade` (`idAtividade`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -254,7 +254,7 @@ ALTER TABLE `realiza_atividade`
 --
 ALTER TABLE `solicitacao_disciplina`
   ADD CONSTRAINT `fk_disciplina_solicitada` FOREIGN KEY (`idDisciplina`) REFERENCES `disciplina` (`idDisciplina`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_solicitao_disciplina` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_solicitao_disciplina` FOREIGN KEY (`idAluno`) REFERENCES `usuario` (`idProfessor`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

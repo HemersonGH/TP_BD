@@ -9,7 +9,7 @@ class Usuario_model extends CI_Model
 
   public function cadastrar($dadosUsuario)
   {
-    return $this->db->insert('usuario', $dadosUsuario);
+    return $this->db->insert('professor', $dadosUsuario);
   }
 
   public function valida_Usuario($email, $senha)
@@ -17,68 +17,46 @@ class Usuario_model extends CI_Model
     $this->db->where('email', $email);
     $this->db->where('senha', $senha);
 
-    return $this->db->get('usuario')->result();
+    return $this->db->get('professor')->result();
   }
 
-  public function get_Usuario($idUsuario=null)
+  public function get_Usuario($idProfessor=null)
   {
-    $this->db->where('idUsuario', $idUsuario);
+    $this->db->where('idProfessor', $idProfessor);
 
-    return $this->db->get('usuario')->result();
+    return $this->db->get('professor')->result();
   }
 
-  public function excluir($idUsuario=null)
+  public function excluir($idProfessor=null)
   {
-    $this->db->where('idUsuario', $idUsuario);
+    $this->db->where('idProfessor', $idProfessor);
 
-    return $this->db->delete('usuario');
+    return $this->db->delete('professor');
   }
 
-  public function salvar_atualizacao($idUsuario, $dadosUsuario)
+  public function salvar_atualizacao($idProfessor, $dadosUsuario)
   {
-    $this->db->where('idUsuario', $idUsuario);
+    $this->db->where('idProfessor', $idProfessor);
 
-    return $this->db->update('usuario', $dadosUsuario);
+    return $this->db->update('professor', $dadosUsuario);
   }
 
-  public function salvar_senha($idUsuario, $senhaAntiga, $senhaNova)
+  public function salvar_senha($idProfessor, $senhaAntiga, $senhaNova)
   {
     $this->db->select('senha');
-    $this->db->where('idUsuario', $idUsuario);
+    $this->db->where('idProfessor', $idProfessor);
 
-    $dadosUsuario['senha'] = $this->db->get('usuario')->result();
+    $dadosUsuario['senha'] = $this->db->get('professor')->result();
     $novosDados['senha'] = $senhaNova;
 
     if ($dadosUsuario['senha'][0]->senha == $senhaAntiga) {
-      $this->db->where('idUsuario', $idUsuario);
-      $this->db->update('usuario', $novosDados);
+      $this->db->where('idProfessor', $idProfessor);
+      $this->db->update('professor', $novosDados);
 
       return true;
     } else {
       return false;
     }
-  }
-
-  public function get_Solicitacoes($idProfessor=null)
-  {
-    $this->db->select('count(*) as total');
-    $this->db->where('idProfessor', $idProfessor);
-    $this->db->where('status_solicitacao', 1);
-
-    $qtd = $this->db->get('solicitacao_disciplina')->result();
-
-    return $qtd[0]->total;
-  }
-
-  public function get_Atividades_Nao_Avaliada($idProfessor=null)
-  {
-    $this->db->select('count(*) as total');
-    $this->db->where('idProfessor', $idProfessor);
-    $this->db->where('status_avaliacao', 2);
-
-    $qtd = $this->db->get('realiza_atividade')->result();
-
-    return $qtd[0]->total;
   }
 
 }

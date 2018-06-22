@@ -7,14 +7,14 @@
   <span class="navbar-toggler-icon"></span>
 </button>
 
-<a class="navbar-brand" href="<?= base_url('usuario/'.$this->session->userdata('tipo_usuario')); ?>">
+<a class="navbar-brand" href="<?= base_url(); ?>usuario">
   <span class="fa fa-home" aria-hidden="true"></span> Home
 </a>
 
 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item type_color">
-      <a class="nav-link type_color" href="<?= base_url('usuario/atualizar/'.$this->session->userdata('idUsuario')); ?>">
+      <a class="nav-link type_color" href="<?= base_url('usuario/atualizar/'.$this->session->userdata('idProfessor')); ?>">
         <span class="fa fa-user-circle type_color" aria-hidden="true"></span> Perfil
       </a>
     </li>

@@ -7,7 +7,7 @@
   <div class="col-md-12">
     <div class="col-md-6 form-control">
       <form class="paddingForm" action="<?= base_url(); ?>usuario/salvar_atualizacao" method="post">
-        <input type="hidden" id="idUsuario" name="idUsuario" value="<?= $usuario[0]->idUsuario; ?>">
+        <input type="hidden" id="idProfessor" name="idProfessor" value="<?= $usuario[0]->idProfessor; ?>">
         <div class="row">
           <div class="col-md-12">
             <label for="name"> <h6> Nome: </h6> </label>
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <a class="paddingButton btn btn-danger left" href="<?= base_url('usuario/'.$this->session->userdata('tipo_usuario')); ?>" > Cancelar </a>
+            <a class="paddingButton btn btn-danger left" href="<?= base_url(); ?>usuario" > Cancelar </a>
             <button type="submit" class="paddingButton btn btn-success right cursor">
               <span class="fa fa-save" aria-hidden="true"></span> Salvar
             </button>
@@ -58,7 +58,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <form class="" action="<?= base_url(); ?>usuario/salvar_senha" method="post">
-      <input type="hidden" id="idUsuarioSenha" name="idUsuarioSenha" value="<?= $usuario[0]->idUsuario; ?>">
+      <input type="hidden" id="idProfessorSenha" name="idProfessorSenha" value="<?= $usuario[0]->idProfessor; ?>">
       <div class="modal-content">
         <div class="modal-header">
           <h4> Atualizar Senha </h4>

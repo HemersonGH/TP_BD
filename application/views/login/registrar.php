@@ -8,11 +8,6 @@
     <input type="date" class="form-control" id="data" name="data" required>
     <input type="email" class="form-control" id="email" name="email" placeholder="Email" required autofocus>
     <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
-    <!-- <input type="password" class="form-control" id="confirmSenha" name="confirmSenha" placeholder="Confirmar Senha" required> -->
-    <select id="tipo_usuario" name="tipo_usuario" class="form-control select" required>
-      <option value="1"> Aluno </option>
-      <option value="2"> Professor </option>
-    </select>
     <div class="row">
       <div class="col-md-6">
         <a class="btn btn-danger btn-block" href="<?= base_url(); ?>usuario">
